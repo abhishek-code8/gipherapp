@@ -1,0 +1,12 @@
+.example-button-row {
+  margin-left: 10%;
+}
+button {
+  margin: 0.5em;
+}
+.container {
+  max-width: 100%;
+}
+.login {
+  align-items: left;
+}

@@ -11,7 +11,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './search/search.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { Routes, RouterModule } from '@angular/router'
+
 
 import {MatTabsModule} from '@angular/material/tabs';
 import { FavouriteComponent } from './favourite/favourite.component';
@@ -21,6 +21,9 @@ import { TrendingComponent } from './trending/trending.component';
 import { gifService } from './gifService';
 import { ReccomendationComponent } from './reccomendation/reccomendation.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { HeaderComponent } from './header/header.component';
+import {MatIconModule} from '@angular/material/icon'
+
 
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     SearchComponent,
     FavouriteComponent,
     TrendingComponent,
-    ReccomendationComponent
+    ReccomendationComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +47,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatTabsModule,
     MatButtonModule,
     MatFormFieldModule,
+    MatIconModule
+
 
     
   ],
