@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
@@ -22,7 +22,13 @@ import { gifService } from './gifService';
 import { ReccomendationComponent } from './reccomendation/reccomendation.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { HeaderComponent } from './header/header.component';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component'
+import { LoginService } from './login/login.service';
+import { RegisterService } from './register/register.service';
+import { AuthGuard } from './auth.guard';
+import { AuthInterceptor } from './auth.interceptor';
 
 
 @NgModule({
@@ -32,7 +38,9 @@ import {MatIconModule} from '@angular/material/icon'
     FavouriteComponent,
     TrendingComponent,
     ReccomendationComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -53,8 +61,8 @@ import {MatIconModule} from '@angular/material/icon'
     
   ],
   providers: [
-    favouriteService,gifService
-  ],
+    favouriteService,gifService, LoginService, RegisterService, AuthGuard, [{provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor,multi:true}
+  ]],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

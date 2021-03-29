@@ -1,0 +1,36 @@
+<div class="bootstrap-wrapper">
+
+    <div class="container mt">
+        
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="container text-center">
+                    <img class="img-fluid" style="width: 80px;" src="assets/register.png" alt="" />
+                </div>
+                <h1 class="text-center">Register new user</h1>
+                
+                <!-- Register form -->
+                <form (ngSubmit)="addUser()">
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input [(ngModel)]="credentials.userId" name="userId" required type="text" matInput />
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input [(ngModel)]="credentials.userPassword" name="password" required type="password" matInput />
+                    </mat-form-field>
+                    
+                    <div class="container text-center">
+                        <button type="submit" mat-raised-button color="accent">Register</button>
+                        <a style="margin-left: 10px" mat-raised-button color="primary" routerLink="/login">Existing user? Login</a>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

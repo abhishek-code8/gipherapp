@@ -16,14 +16,15 @@ import { Subject } from 'rxjs';
 
 
     getGifs(){
-      const headers_object = new HttpHeaders();
-      headers_object.append('Content-Type', 'application/json');
-      headers_object.append("Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjE2OTk2OTUwLCJleHAiOjE2MTczNDI1NTB9.F9mc8XYBjMPxJhVa3CLlE1ZXxpOgwiA-kL13TiLZ9zY");
-      headers_object.set('access-control-allow-origin','http://localhost:8080/');
-      const httpOptions = {
-        headers: headers_object
-      };
-      return this.http.get("http://localhost:8080/api/v1/gifs/1", httpOptions);
+      // const headers_object = new HttpHeaders();
+      // headers_object.append('Content-Type', 'application/json');
+      // headers_object.append('Authorization', "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjE2OTk2OTUwLCJleHAiOjE2MTczNDI1NTB9.F9mc8XYBjMPxJhVa3CLlE1ZXxpOgwiA-kL13TiLZ9zY");
+      // //headers_object.set('access-control-allow-origin','http://localhost:8080/');
+      // const httpOptions = {
+      //   headers: headers_object
+      // };
+      let user = localStorage.getItem("userId");
+      return this.http.get(`http://localhost:8080/api/v1/gifs/${user}`);
 
   }
 

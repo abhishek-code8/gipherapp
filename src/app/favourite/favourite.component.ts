@@ -16,6 +16,7 @@ export class FavouriteComponent implements OnInit {
   ngOnInit(): void {
     console.log("Extracting data");
     this.favser.getGifs().pipe().subscribe((res:any)=>{
+      console.log(res);
       this.favser.setFav(res);
     });
     this.dataFav = this.favser.resultObs().subscribe(results =>{

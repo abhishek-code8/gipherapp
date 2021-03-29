@@ -94,7 +94,7 @@ searchRecos(ui){
   
   public postUrl(userId,url:String){
     console.log(url)
-    this.http.post("http://localhost:8080/api/v1/gifs/",{"userId":userId, "gifId":[url]}).pipe().subscribe((data)=>{
+    this.http.post("http://localhost:8080/api/v1/gifs",{"userId":userId, "gifId":[url]}).pipe().subscribe((data)=>{
       console.log(data);
     })
   }
