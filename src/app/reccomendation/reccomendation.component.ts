@@ -29,4 +29,11 @@ export class ReccomendationComponent implements OnInit {
     });
  
   }
+  addFav(url,name){
+    let user = localStorage.getItem("userId");
+    console.log(url)
+    console.log(name)
+    this.giphy.postUrl(user,url);
+
+  }
 }

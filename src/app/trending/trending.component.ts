@@ -31,9 +31,10 @@ export class TrendingComponent implements OnInit {
   }
 
   addFav(url,name){
+    let user = localStorage.getItem("userId");
     console.log(url)
     console.log(name)
-    this.giphy.postUrl("1",url);
+    this.giphy.postUrl(user,url);
 
   }
 

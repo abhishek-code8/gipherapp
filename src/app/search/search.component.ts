@@ -27,6 +27,7 @@ export class  SearchComponent implements OnInit {
     //   console.log(sresults.data);
 
     // });
+    let user = localStorage.getItem("userId");
      this.giphy.searchGifs(this.ui).pipe( take(1) ).subscribe((res: any) => {
 
       this.giphy.setsResults(res.data);
@@ -35,7 +36,7 @@ export class  SearchComponent implements OnInit {
         this.giphy.setReccomendations(res.data);
        for(var x in res.data){
          console.log(x);
-         this.giphy.postReccomendation("77",res.data[x].name);
+         this.giphy.postReccomendation(user,res.data[x].name);
        }
       //  console.log(this.searchReccomendations);
       //  this.searchReccomendations=[];
@@ -51,11 +52,11 @@ export class  SearchComponent implements OnInit {
     });
   }
   addFav(url,name){
+    let user = localStorage.getItem("userId");
     console.log(url)
     console.log(name)
-    this.giphy.postUrl("77",url);
-
-
+    this.giphy.postUrl(user,url);
 
   }
+
 }

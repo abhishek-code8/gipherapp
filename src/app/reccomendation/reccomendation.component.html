@@ -12,7 +12,7 @@
           <img mat-card-image class="example-image" [src]="result.images.downsized_medium.url" [alt]="result.title">
        
           <mat-card-actions>
-              <button mat-stroked-button color="warn">Added</button>
+            <button mat-button (click)="addFav(result.images.downsized_medium.url,result.title)">Add to Favorites</button>
           </mat-card-actions>
         </mat-card>
       </div>

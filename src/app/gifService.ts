@@ -30,7 +30,8 @@ export class gifService {
     return this.http.get(`${this.apiUrl}`); 
   }
   getReccos(){
-    this.apiUrl = `http://localhost:8090/api/v1/reccomendations/77`; //Enter GIPHY API key after equals sign
+    let user = localStorage.getItem("userId");
+    this.apiUrl = `http://localhost:8090/api/v1/reccomendations/${user}`; //Enter GIPHY API key after equals sign
     return this.http.get(`${this.apiUrl}`);
 
   }
