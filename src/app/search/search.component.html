@@ -1,0 +1,43 @@
+  <mat-toolbar class="fixedElement">
+    <h1 class="text-center display-2 mt-3"><span class="text-danger">Angular 6</span> GIPHY API Search</h1>
+
+    <mat-toolbar-row>
+
+    <form >
+      <div class="form-group">
+        <input type="search" class="form-control" placeholder="Search here!" [(ngModel)]="ui.userInput" name="userInput">
+      </div>
+      <button type="submit" class="btn btn-primary mb-3" (click)="search()">Search all the gifs!</button>
+      <!-- <img src="../../../assets/Poweredby_100px-Black_VertLogo.png" alt=""> -->
+      
+      
+    </form>
+  </mat-toolbar-row>
+  </mat-toolbar>
+  <div class="page-props">
+
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="33%" *ngFor="let result of searchresults">
+        <mat-card class="example-card"  >
+      <mat-card-header>
+        <!-- <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+        <mat-card-title>{{result.title}}</mat-card-title>
+    
+      </mat-card-header>
+      <img mat-card-image class="example-image" [src]="result.images.downsized_medium.url" [alt]="result.title">
+      <!-- <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content> -->
+      <mat-card-actions>
+        <button mat-button (click)="addFav(result.images.downsized_medium.url,result.title)">Add to Favorites</button>
+        <!-- <button mat-button>SHARE</button> -->
+      </mat-card-actions>
+    </mat-card>
+      </div>
+    </div>

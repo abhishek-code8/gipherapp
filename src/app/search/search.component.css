@@ -1,0 +1,21 @@
+.fixedElement {
+    background-color: blue;
+/* position: fixed; */
+height: 100px;
+z-index: 10;
+}
+.page-props{
+    background-color: black;
+    /* position: fixed; */
+    /* scroll-margin: 32px; */
+}
+.example-image {
+    width: 32vw;
+    height: 33vh;
+  }
+  .example-card {
+    width: fit-content;
+    height: fit-content;
+  }
+  
+  

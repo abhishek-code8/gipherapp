@@ -1,0 +1,18 @@
+
+    <!-- <app-gifbay></app-gifbay> -->
+    <div class="page-props">
+  
+      <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div fxFlex="33%" *ngFor="let result of dataFav.data">
+          <mat-card class="example-card"  >
+        <mat-card-header>
+
+      
+        </mat-card-header>
+        <img mat-card-image class="example-image" [src]="result" alt="title here">
+     
+        <mat-card-actions>
+            <button mat-stroked-button color="warn">Added</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>

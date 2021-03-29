@@ -1,0 +1,30 @@
+<!-- <div class="fixedElement"> -->
+  <!-- <section class="web_homePage" (scroll)="onWindowScroll($event);">   
+<app-search></app-search>
+</div> -->
+<mat-tab-group class="tabs">
+  <mat-tab label="Trending">
+    <ng-template matTabContent> 
+      <!-- <app-gifbay></app-gifbay> -->
+      <app-trending></app-trending>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Search">
+    <ng-template matTabContent> 
+      <app-search></app-search>  
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Favorites">
+    <ng-template matTabContent> 
+    <app-favourite></app-favourite>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Reccomendations">
+    <ng-template matTabContent> 
+    <app-reccomendation></app-reccomendation>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group> 
+<!-- </div> -->
+<!-- <app-gifbay></app-gifbay>  -->
+ <!-- </section> -->
