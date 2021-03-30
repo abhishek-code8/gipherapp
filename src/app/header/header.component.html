@@ -1,16 +1,27 @@
-<p>
-    <mat-toolbar>
-      <mat-icon aria-hidden="false" aria-label="Example home icon" routerLink="/" routerLinkActive="active">timeline icon</mat-icon>
 
-      <!-- <span><button mat-raised-button >Gipher</button></span> -->
-      <div class="example-button-row container">
-        <button mat-raised-button routerLink="/search" color="primary" routerLinkActive="active">Search Gifs</button>
-        <button mat-raised-button routerLink="/favourite" routerLinkActive="active" color="primary">Favourite Gifs</button>
-        
-        <button mat-raised-button routerLink="/recommended" color="primary" routerLinkActive="active">Recommended Gifs</button>
-        <button mat-raised-button routerLink="/login" color="primary" routerLinkActive="active" class="login">Login</button>
-        <button mat-raised-button routerLink="/register" color="primary" routerLinkActive="active" class="login">Register</button>
+  <mat-toolbar>
+    <a href="/"><mat-icon aria-hidden="false" aria-label="Example home icon" routerLink="/" routerLinkActive="active">home</mat-icon></a>
 
-      </div>
-    </mat-toolbar>
-  </p>
+    <!-- <span><button mat-button >Gipher</button></span> -->
+
+
+      <button mat-button routerLink="/search"  routerLinkActive="active">Search Gifs</button>
+      <button mat-button routerLink="/favourite" routerLinkActive="active" >Favourite Gifs</button>
+      
+      <button mat-button routerLink="/recommended"  routerLinkActive="active">Recommended Gifs</button>
+
+
+
+    <span class="example-spacer"></span>
+
+      <button mat-button *ngIf="!loggedIn" routerLink="/login" routerLinkActive="active" class="login">Login</button>
+      <button mat-button  *ngIf="loggedIn">Hello, {{userId}}</button>
+      <button mat-button routerLink="/register" routerLinkActive="active" class="login" *ngIf="!loggedIn">Register</button>
+      <button mat-button style="margin-left: 40px;"  *ngIf="loggedIn" (click)="logoutUser()">Logout</button >
+
+    <!-- <span class="example-spacer"></span>
+    <a *ngIf="!loggedIn" mat-icon-button routerLink="/login">Login</a>
+    <a mat-icon-button *ngIf="loggedIn">Hello, {{userId}}</a>
+    <a style="margin-left: 40px;"  *ngIf="loggedIn" (click)="logoutUser()" mat-icon-button>Logout</a> -->
+
+  </mat-toolbar>

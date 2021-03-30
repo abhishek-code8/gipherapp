@@ -1,12 +1,14 @@
-.example-button-row {
-  margin-left: 10%;
+mat-icon {
+  color: white;
 }
 button {
   margin: 0.5em;
+  background-color: rgb(216, 140, 0);
 }
-.container {
-  max-width: 100%;
+
+mat-toolbar {
+  background-color: rgb(43, 43, 43);
 }
-.login {
-  align-items: left;
+.newLo {
+  justify-content: right;
 }
