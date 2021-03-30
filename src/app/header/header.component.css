@@ -9,6 +9,17 @@ button {
 mat-toolbar {
   background-color: rgb(43, 43, 43);
 }
-.newLo {
-  justify-content: right;
+
+span {
+  color: rgb(243, 233, 213);
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+}
+a {
+  margin: auto 0.2em;
+  text-decoration: none;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
 }

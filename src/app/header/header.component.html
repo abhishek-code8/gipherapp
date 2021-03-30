@@ -1,8 +1,8 @@
-
+<!-- 
   <mat-toolbar>
     <a href="/"><mat-icon aria-hidden="false" aria-label="Example home icon" routerLink="/" routerLinkActive="active">home</mat-icon></a>
 
-    <!-- <span><button mat-button >Gipher</button></span> -->
+
 
 
       <button mat-button routerLink="/search"  routerLinkActive="active">Search Gifs</button>
@@ -14,14 +14,30 @@
 
     <span class="example-spacer"></span>
 
-      <button mat-button *ngIf="!loggedIn" routerLink="/login" routerLinkActive="active" class="login">Login</button>
+      <button mat-stroked-button *ngIf="!loggedIn" routerLink="/login" routerLinkActive="active" class="login">Login</button>
       <button mat-button  *ngIf="loggedIn">Hello, {{userId}}</button>
       <button mat-button routerLink="/register" routerLinkActive="active" class="login" *ngIf="!loggedIn">Register</button>
       <button mat-button style="margin-left: 40px;"  *ngIf="loggedIn" (click)="logoutUser()">Logout</button >
 
-    <!-- <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
     <a *ngIf="!loggedIn" mat-icon-button routerLink="/login">Login</a>
     <a mat-icon-button *ngIf="loggedIn">Hello, {{userId}}</a>
-    <a style="margin-left: 40px;"  *ngIf="loggedIn" (click)="logoutUser()" mat-icon-button>Logout</a> -->
+    <a style="margin-left: 40px;"  *ngIf="loggedIn" (click)="logoutUser()" mat-icon-button>Logout</a>
 
+  </mat-toolbar> -->
+
+  <mat-toolbar>
+    <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+      <mat-icon  aria-hidden="false" aria-label="Example home icon" routerLink="/" routerLinkActive="active">home</mat-icon>
+    </button>
+
+    <a routerLink="/search"><span routerLink="/search" routerLinkActive="active" >Search</span></a>
+    <a span routerLink="/favourite"><span routerLink="/favourite" routerLinkActive="active" >Favourites</span></a>
+    <a routerLink="/recommended"><span routerLink="/recommended" routerLinkActive="active" >Recommended</span></a>
+    <span class="example-spacer"></span>
+    <a routerLink="/login"><span *ngIf="!loggedIn" routerLink="/login" routerLinkActive="active" class="login" >Login</span></a>
+    <a routerLink="/register"><span routerLink="/register" routerLinkActive="active" class="login" *ngIf="!loggedIn" >Register</span></a>
+    <a><span style="margin-left: 40px;"  *ngIf="loggedIn" (click)="logoutUser()" >Logout</span></a>
+
+    
   </mat-toolbar>

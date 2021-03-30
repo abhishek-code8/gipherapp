@@ -1,37 +1,40 @@
 .fixedElement {
-    background-color: blue;
-/* position: fixed; */
-height: 100px;
-z-index: 10;
+  background-color: blue;
+  /* position: fixed; */
+  height: 100px;
+  z-index: 10;
 }
-.page-props{
-    background-color: black;
-    /* position: fixed; */
-    /* scroll-margin: 32px; */
+.page-props {
+  background-color: black;
+  /* position: fixed; */
+  /* scroll-margin: 32px; */
 }
 .example-image {
-    width: 32vw;
-    height: 33vh;
-  }
-  .example-card {
-    width: fit-content;
-    height: fit-content;
-  }
-  .card{
-    background-color:rgb(43, 43, 43);
-    box-shadow: 5px 5px 5px grey;
-    margin-bottom: 20px !important;
-    margin-left: 5px;
-    color: rgb(216, 140, 0);
-    /* height: fit-content;
-    width: fit-content; */
-  
-  }
-  .add-button{
-    background-color: rgb(216, 140, 0);
-    color: rgb(43, 43, 43);
-  }
-.mwidth{
-    width: 33%;
+  width: 32vw;
+  height: 33vh;
 }
-  
+.example-card {
+  width: fit-content;
+  height: fit-content;
+}
+.card {
+  background-color: rgb(43, 43, 43);
+  box-shadow: 5px 5px 5px grey;
+  margin-bottom: 20px !important;
+  margin-left: 5px;
+  color: rgb(216, 140, 0);
+  /* height: fit-content;
+    width: fit-content; */
+}
+mat-card-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+}
+.add-button {
+  background-color: rgb(216, 140, 0);
+  color: rgb(43, 43, 43);
+  font-family: "Roboto", sans-serif;
+}
+.mwidth {
+  width: 33%;
+}
