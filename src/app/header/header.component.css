@@ -17,12 +17,13 @@ span {
   color: rgb(243, 233, 213);
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
+  font-size: medium;
 }
 span:hover {
   color: rgb(226, 199, 145);
 }
 a {
-  margin: auto 0.2em;
+  margin: auto 0.5em;
   text-decoration: none;
 }
 
