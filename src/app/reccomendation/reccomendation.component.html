@@ -1,6 +1,6 @@
 
     <!-- <app-gifbay></app-gifbay> -->
-    <div class="page-props">
+    <!-- <div class="page-props">
   
         <div fxLayout="row wrap" fxLayoutGap="16px grid" *ngFor="let x of results">
           <div fxFlex="33%" *ngFor="let result of x">
@@ -17,4 +17,28 @@
         </mat-card>
       </div>
     </div>
-        </div>
+        </div> -->
+        <ngx-masonry >
+          <!-- <div ngxMasonryItem class="page">
+          
+              <div fxLayout="row wrap" fxLayoutGap="16px grid"> -->
+                <div *ngFor="let x of results">
+                <div ngxMasonryItem class="mwidth" *ngFor="let result of x">
+                  <mat-card role="group" class="card" >
+                <mat-card-header>
+                
+                  <mat-card-title>{{result.title}}</mat-card-title>
+              
+                </mat-card-header>
+                <img mat-card-image  [src]="result.images.downsized_medium.url" [alt]="result.title">
+             
+                <mat-card-actions>
+                  <button mat-stroked-button class="add-button" (click)="addFav(result.images.downsized_medium.url,result.title)">Add to Favorites</button>
+                </mat-card-actions>
+              </mat-card>
+          
+            </div>
+            </div>
+            </ngx-masonry>
+          
+          

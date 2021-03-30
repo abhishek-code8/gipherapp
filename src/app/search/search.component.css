@@ -17,5 +17,21 @@ z-index: 10;
     width: fit-content;
     height: fit-content;
   }
+  .card{
+    background-color:rgb(43, 43, 43);
+    box-shadow: 5px 5px 5px grey;
+    margin-bottom: 20px !important;
+    margin-left: 5px;
+    color: rgb(216, 140, 0);
+    /* height: fit-content;
+    width: fit-content; */
   
+  }
+  .add-button{
+    background-color: rgb(216, 140, 0);
+    color: rgb(43, 43, 43);
+  }
+.mwidth{
+    width: 33%;
+}
   

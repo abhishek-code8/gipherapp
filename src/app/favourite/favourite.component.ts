@@ -23,6 +23,7 @@ export class FavouriteComponent implements OnInit {
       console.log(results);
       this.dataFav = results;
       console.log("Done with obs");
+      
     })
     console.log(this.dataFav);
   }

@@ -30,10 +30,18 @@ export class ReccomendationComponent implements OnInit {
  
   }
   addFav(url,name){
+    if(localStorage.getItem("userId")){
     let user = localStorage.getItem("userId");
     console.log(url)
     console.log(name)
     this.giphy.postUrl(user,url);
+    alert('Added to favorites');
+    }
+    else {
+      alert('Please Login to continue');
+
+    }
 
   }
+
 }

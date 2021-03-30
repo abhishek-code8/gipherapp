@@ -1,19 +1,25 @@
-<div class="page-props">
-    
-    <div fxLayout="row wrap" fxLayoutGap="16px grid">
-      <div fxFlex="33%" *ngFor="let result of results">
-        <mat-card class="example-card"  >
+<ngx-masonry >
+<!-- <div ngxMasonryItem class="page">
+
+    <div fxLayout="row wrap" fxLayoutGap="16px grid"> -->
+      <div ngxMasonryItem class="mwidth" *ngFor="let result of results">
+        <mat-card role="group" class="card" >
       <mat-card-header>
       
         <mat-card-title>{{result.title}}</mat-card-title>
     
       </mat-card-header>
-      <img mat-card-image class="example-image" [src]="result.images.downsized_medium.url" [alt]="result.title">
+      <img mat-card-image  [src]="result.images.downsized_medium.url" [alt]="result.title">
    
       <mat-card-actions>
-        <button mat-button (click)="addFav(result.images.downsized_medium.url,result.title)">Add to Favorites</button>
+        <button mat-stroked-button class="add-button" (click)="addFav(result.images.downsized_medium.url,result.title)">Add to Favorites</button>
       </mat-card-actions>
     </mat-card>
+
   </div>
-      </div>
-    </div>
+      <!-- </div>
+
+
+    </div> -->
+  </ngx-masonry>
+

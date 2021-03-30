@@ -29,7 +29,9 @@ import { LoginService } from './login/login.service';
 import { RegisterService } from './register/register.service';
 import { AuthGuard } from './auth.guard';
 import { AuthInterceptor } from './auth.interceptor';
-
+import { MatInputModule } from '@angular/material/input';
+import { NgxMasonryModule } from 'ngx-masonry';
+import { MbscModule } from '@mobiscroll/angular-lite';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,10 @@ import { AuthInterceptor } from './auth.interceptor';
     MatTabsModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
+    MatInputModule,
+    NgxMasonryModule,
+    MbscModule
 
 
     

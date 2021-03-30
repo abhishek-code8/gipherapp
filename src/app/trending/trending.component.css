@@ -1,0 +1,38 @@
+.card{
+    background-color:rgb(43, 43, 43);
+    box-shadow: 5px 5px 5px grey;
+    margin-bottom: 20px !important;
+    margin-left: 5px;
+    color: rgb(216, 140, 0);
+    /* height: fit-content;
+    width: fit-content; */
+
+}
+.add-button{
+    background-color: rgb(216, 140, 0);
+    color: rgb(43, 43, 43);
+}
+.mwidth{
+    width: 33%;
+}
+.image{
+     height: fit-content;
+    width: 100px;
+}
+.page{
+    background-color: azure;
+}
+.masonry-layout {
+    /* column-count: 2; */
+    column-gap: 2px;
+    /* margin: 8px; */
+}
+
+.masonry-layout__panel {
+    break-inside: avoid;
+}
+
+.masonry-layout__panel-content {
+    display: flex;
+    flex-flow: column wrap;
+}
