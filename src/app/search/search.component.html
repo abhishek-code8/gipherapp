@@ -1,19 +1,38 @@
-  <mat-toolbar class="fixedElement">
-    <h1 class="text-center display-2 mt-3"><span class="text-danger">Angular 6</span> GIPHY API Search</h1>
 
-    <mat-toolbar-row>
+    <h1 class="text-center display-2 mt-3"><span class="text-danger"></span> GIPHER Search</h1>
 
+    <div class = "contain">
     <form >
       <div class="form-group">
         <input type="search" class="form-control" placeholder="Search here!" [(ngModel)]="ui.userInput" name="userInput">
+        <button type="submit" class="btn btn-primary mb-3" (click)="search()">Search all the gifs!</button>  
       </div>
-      <button type="submit" class="btn btn-primary mb-3" (click)="search()">Search all the gifs!</button>
-      <!-- <img src="../../../assets/Poweredby_100px-Black_VertLogo.png" alt=""> -->
-      
-      
+     
     </form>
-  </mat-toolbar-row>
-  </mat-toolbar>
+  </div>
+
+    <!-- <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Favorite food</mat-label>
+        <div>
+        <input type="search" class="form-control" placeholder="Search here!" [(ngModel)]="ui.userInput" name="userInput">
+      </div>
+        
+      </mat-form-field>
+      <button type="submit" class="btn btn-primary mb-3" (click)="search()">Search all the gifs!</button>
+      </form> -->
+
+
+    <!-- <mat-form-field class="example-form-field">
+      <mat-label>Clearable input</mat-label>
+      <input type="search" class="form-control" placeholder="Search here!" [(ngModel)]="ui.userInput" name="userInput">
+      <button mat-button *ngIf="ui.userInput" matSuffix mat-icon-button aria-label="Clear" (click)="ui.userInput=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <button type="submit" class="btn btn-primary mb-3" (click)="search()">Search all the gifs!</button> -->
+    
+
   <ngx-masonry >
     <!-- <div ngxMasonryItem class="page">
     

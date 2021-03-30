@@ -16,6 +16,14 @@ mat-card-title {
   background-color: rgb(216, 140, 0);
   color: rgb(43, 43, 43);
   font-family: "Roboto", sans-serif;
+  transition: transform 250ms;
+}
+.add-button:hover {
+  color: white;
+}
+.add-button:active {
+  color: black;
+  transform: translateY(-10px);
 }
 .mwidth {
   width: 33%;

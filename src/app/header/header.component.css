@@ -1,6 +1,9 @@
 mat-icon {
   color: white;
 }
+mat-icon:hover {
+  color: rgbrgb(226, 199, 145);
+}
 button {
   margin: 0.5em;
   background-color: rgb(216, 140, 0);
@@ -14,6 +17,9 @@ span {
   color: rgb(243, 233, 213);
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
+}
+span:hover {
+  color: rgb(226, 199, 145);
 }
 a {
   margin: auto 0.2em;
