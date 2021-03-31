@@ -32,6 +32,7 @@ import { AuthInterceptor } from './auth.interceptor';
 import { MatInputModule } from '@angular/material/input';
 import { NgxMasonryModule } from 'ngx-masonry';
 import { MbscModule } from '@mobiscroll/angular-lite';
+import { NotFoundCompComponent } from './not-found-comp/not-found-comp.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { MbscModule } from '@mobiscroll/angular-lite';
     ReccomendationComponent,
     HeaderComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    NotFoundCompComponent
   ],
   imports: [
     BrowserModule,

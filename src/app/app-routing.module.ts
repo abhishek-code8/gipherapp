@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth.guard';
 import { FavouriteComponent } from './favourite/favourite.component';
 import { LoginComponent } from './login/login.component';
+import { NotFoundCompComponent } from './not-found-comp/not-found-comp.component';
 import { ReccomendationComponent } from './reccomendation/reccomendation.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
@@ -29,6 +30,13 @@ const routes: Routes = [
 
   {path:'register',
   component:RegisterComponent},
+  {
+    path:'404', component: NotFoundCompComponent
+  },
+  {
+    path:'**', redirectTo:'/404'
+  }
+
 ];
 
 @NgModule({
