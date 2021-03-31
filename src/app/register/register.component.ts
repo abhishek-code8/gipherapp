@@ -40,6 +40,8 @@ export class RegisterComponent implements OnInit {
       console.log('Invalid!')
       return;
     }
+    window.location.href="/login";
+
   }
 
 }
