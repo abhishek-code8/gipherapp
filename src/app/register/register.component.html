@@ -12,6 +12,10 @@
                 <!-- Register form -->
                 <form (ngSubmit)="addUser()">
                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input [(ngModel)]="credentials.userEmail" name="userEmail" required type="email" matInput pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required />
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
                         <mat-label>Username</mat-label>
                         <input [(ngModel)]="credentials.userId" name="userId" required type="text" matInput />
                     </mat-form-field>
