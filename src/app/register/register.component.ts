@@ -14,6 +14,7 @@ export class RegisterComponent implements OnInit {
     userEmail:''
     
   }
+  rePassword="";
 
   submitted = false;
 

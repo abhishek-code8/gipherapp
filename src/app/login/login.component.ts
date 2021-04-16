@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
           
           this.loginService.loginUser(res.token);
           alert('Valid, redirecting to your dashboard');
-          window.location.href="/";
+          window.location.href="/search";
         },
         (error:any)=> {
           console.log(error);
