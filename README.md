@@ -1,3 +1,15 @@
+# Gif-er Application
+About the application:
+- Frontend : Angular/Typescript
+- Backend : SpringBoot/Java
+- Database : SQL/MongoDB
+
+Backend Services Repo:
+1. User service : [Link](https://github.com/abhishek-code8/UserService)
+2. Favourite Service : [Link](https://github.com/abhishek-code8/favouriteService)
+3. Recommendation Service : [Link](https://github.com/abhishek-code8/recommendationService)
+
+
 # GiferFront
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
